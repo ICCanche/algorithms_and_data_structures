@@ -89,7 +89,7 @@ Means to "visit" the left branch, then the current node, and finally, the right 
 ```python
 
 def inOrderTraversal(node):
-    if (node is not None):
+    if node:
         inOrderTraversal(node.left)
         visit(node)
         inOrderTraversal(node.right)
@@ -112,7 +112,7 @@ Visits the current node before its child nodes
 ```python
 
 def preOrderTraversal(node):
-    if (node is not None):
+    if node:
         visit(node)
         preOrderTraversal(node.left)
         preOrderTraversal(node.right)
@@ -135,7 +135,7 @@ Visits the current node after its child nodes.
 ```python
 
 def postOrderTraversal(node):
-    if (node is not None):
+    if node:
         postOrderTraversal(node.left)
         postOrderTraversal(node.right)
         visit(node)
